@@ -1,0 +1,5 @@
+tt_content.shortcut {
+  variables.shortcuts {
+    overlayMode.field = overlay_mode
+  }
+}

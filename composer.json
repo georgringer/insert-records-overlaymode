@@ -1,0 +1,32 @@
+{
+  "name": "georgringer/insert-records-overlaymode",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "insert records",
+    "language overlay"
+  ],
+  "authors": [
+    {
+      "name": "Georg Ringer",
+      "role": "Developer",
+      "homepage": "https://ringer.it"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "description": "Let editors choose if a language overlay should be performed",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "require": {
+    "typo3/cms-core": "^9 || ^10"
+  },
+  "autoload": {
+    "psr-4": {
+      "GeorgRinger\\InsertRecordsOverlaymode\\": "Classes"
+    }
+  },
+  "replace": {
+    "typo3-ter/insert-records-overlaymode": "self.version"
+  }
+}
