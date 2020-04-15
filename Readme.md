@@ -9,7 +9,7 @@ However, the drawback is that it is **not** possible anymore to render a record 
 
 Install this extension just as any other extension. Either download it from TER or get it via composer with
 ```
-composer require georgringer/insert-record-overlaymode
+composer require georgringer/insert-records-overlaymode
 ```
 
 After the installation, include the TypoScript from the extension. Either select it in the sys_template record or copy
