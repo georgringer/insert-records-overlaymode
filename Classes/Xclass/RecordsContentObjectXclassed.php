@@ -84,7 +84,8 @@ class RecordsContentObjectXclassed extends RecordsContentObject
                     if (is_array($row)) {
                         $dontCheckPid = isset($conf['dontCheckPid.']) ? $this->cObj->stdWrap($conf['dontCheckPid'], $conf['dontCheckPid.']) : $conf['dontCheckPid'];
                         if (!$dontCheckPid) {
-                            $row = $this->cObj->checkPid($row['pid']) ? $row : '';
+                            $validPageId = $this->getPageRepository()->filterAccessiblePageIds([$row['pid']]);
+                            $row = !empty($validPageId) ? $row : '';
                         }
                         if ($row && !$GLOBALS['TSFE']->recordRegister[$val['table'] . ':' . $val['id']]) {
                             $renderObjName = $conf['conf.'][$val['table']] ?: '<' . $val['table'];
